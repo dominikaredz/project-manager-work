@@ -1,0 +1,74 @@
+:root {
+  --brand: #e20074;
+  --brand-hover: #ff1a8d;
+  --brand-contrast: #ffffff;
+  --bg: #f4f4f7;
+  --surface: #ffffff;
+  --surface-2: #f8f8fb;
+  --surface-hover: #f2f2f6;
+  --border: #e5e5ec;
+  --border-strong: #cfcfd9;
+  --text: #17171f;
+  --muted: #6c6c7c;
+  --shadow: 0 1px 2px rgb(20 20 40 / 0.04), 0 6px 20px rgb(20 20 40 / 0.05);
+  --tone-neutral: #8a8a9a;
+  --tone-brand: #e20074;
+  --tone-info: #2f7fe0;
+  --tone-warning: #d98a00;
+  --tone-danger: #e0384a;
+  --tone-success: #1a9e6a;
+  --radius: 14px;
+  --radius-sm: 9px;
+  color-scheme: light;
+  font-family: "Segoe UI", "Segoe UI Variable", system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme="dark"] {
+  --brand: #e20074;
+  --brand-hover: #ff2b96;
+  --bg: #0c0c11;
+  --surface: #15151c;
+  --surface-2: #1b1b24;
+  --surface-hover: #22222d;
+  --border: #282834;
+  --border-strong: #3a3a49;
+  --text: #ececf2;
+  --muted: #9797a8;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.25);
+  --tone-neutral: #9a9aae;
+  --tone-brand: #ff3d9e;
+  --tone-info: #5aa9ff;
+  --tone-warning: #f5b23d;
+  --tone-danger: #ff6b76;
+  --tone-success: #3fd398;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 360px; background: var(--bg); color: var(--text); }
+body.modal-open { overflow: hidden; }
+button, input, select, textarea { font: inherit; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.15rem; }
+h2 { font-size: 1.05rem; font-weight: 650; margin-bottom: 0; }
+h3 { font-size: 1rem; }
+
+button {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+  cursor: pointer; border: 1px solid var(--brand); border-radius: var(--radius-sm);
+  padding: 0.55rem 1rem; color: var(--brand-contrast); background: var(--brand); font-weight: 600;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+button:hover:not(:disabled) { background: var(--brand-hover); border-color: var(--brand-hover); }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+button.secondary { background: transparent; color: var(--text); border-color: var(--border-strong); }
+button.secondary:hover:not(:disabled) { background: var(--surface-hover); border-color: var(--border-strong); }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
